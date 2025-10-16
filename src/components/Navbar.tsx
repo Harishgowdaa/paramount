@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, Wrench } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,11 +38,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center space-x-3 group">
             <motion.div
-              whileHover={{ rotate: 180 }}
-              transition={{ duration: 0.5 }}
-              className="bg-gradient-to-br from-orange-500 to-orange-600 p-2 rounded-lg"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="h-12"
             >
-              <Wrench className="h-6 w-6 text-white" />
+              <img src="/LOGO.png" alt="Paramount Cutting Tools Logo" className="h-full w-auto object-contain" />
             </motion.div>
             <span className="text-xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
               Paramount Cutting Tools
