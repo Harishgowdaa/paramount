@@ -2,15 +2,19 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Drill, Cog, Wrench, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import solidCarbide from '../assets/images/solid carbide-1.png';
+import solidCarbide from '../assets/images/solid_carbide-1.png';
 import precise from '../assets/images/precise-2.png';
 import highSpeed from '../assets/images/high-speed-3.png';
 import cermet from '../assets/images/cermet-and-pcd-4.png';
+import threadmill from '../assets/images/threadmill-5.png';
+import customizedsplinserts from '../assets/images/customized-spl-inserts-6.png';
+import hob from '../assets/images/hob-7.png';
+import  FineBoring from '../assets/images/Fine-Boring-8.png';
 
 const heroSlides = [
   {
     img: solidCarbide,
-    title: 'The solid carbide all types of precision tools',
+    title: 'solid carbide all types of precision tools',
   },
   {
     img: precise,
@@ -23,6 +27,22 @@ const heroSlides = [
   {
     img: cermet,
     title: 'High speed expendable reamer carbide, cermet and pcd',
+  },
+  {
+    img: threadmill,
+    title: 'Spl solid carbide thread mill and boring tools',
+  },
+  {
+    img: customizedsplinserts,
+    title: 'Customized spl inserts',
+  },
+  {
+    img: hob,
+    title: 'Hob ,fir tree and port tools',
+  },
+  {
+    img: FineBoring,
+    title: 'Competence Reaming and Fine Boring',
   },
 ];
 
@@ -116,7 +136,7 @@ const Home = () => {
                 </div>
 
                 <div className="flex justify-center md:justify-end">
-                  <div className="relative w-full max-w-md md:max-w-lg h-[380px] md:h-[520px]">
+                  <div className="relative w-full max-w-xl md:max-w-2xl h-[350px] md:h-[450px] xl:h-[500px]">
                     <motion.div
                       initial={{ scale: 0.98, opacity: 0 }}
                       animate={{ scale: 1, opacity: 0.9 }}
@@ -150,8 +170,11 @@ const Home = () => {
                       className="absolute top-0 right-0 w-full h-full rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl bg-black"
                     >
                       <div
-                        className="w-full h-full bg-cover bg-center relative"
-                        style={{ backgroundImage: `url(${heroSlides[currentSlide].img})` }}
+                        className="w-full h-full bg-contain bg-center bg-no-repeat relative"
+                        style={{ 
+                          backgroundImage: `url(${heroSlides[currentSlide].img})`,
+                          backgroundColor: 'rgb(15 23 42)' // slate-900
+                        }}
                         role="img"
                         aria-label={heroSlides[currentSlide].title}
                       >
