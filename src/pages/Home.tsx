@@ -14,7 +14,7 @@ import  FineBoring from '../assets/images/Fine-Boring-8.png';
 const heroSlides = [
   {
     img: solidCarbide,
-    title: 'solid carbide all types of precision tools',
+    title: 'Solid carbide all types of precision tools',
   },
   {
     img: precise,
@@ -141,7 +141,7 @@ const Home = () => {
                       initial={{ scale: 0.98, opacity: 0 }}
                       animate={{ scale: 1, opacity: 0.9 }}
                       transition={{ duration: 0.6 }}
-                      className="absolute top-12 right-6 w-full h-full rounded-3xl overflow-hidden border-2 border-white/10 transform rotate-3 bg-black/5 shadow-lg"
+                      className="absolute top-12 right-6 w-full h-full rounded-[2.5rem] overflow-hidden border-4 border-white transform rotate-3 bg-black/5 shadow-lg"
                     >
                       <div
                         className="w-full h-full bg-cover bg-center"
@@ -154,7 +154,7 @@ const Home = () => {
                       initial={{ scale: 0.99, opacity: 0 }}
                       animate={{ scale: 1, opacity: 0.95 }}
                       transition={{ duration: 0.6, delay: 0.05 }}
-                      className="absolute top-6 right-3 w-full h-full rounded-3xl overflow-hidden border-2 border-white/15 transform -rotate-1 bg-black/5 shadow-2xl"
+                      className="absolute top-6 right-3 w-full h-full rounded-[2.5rem] overflow-hidden border-4 border-white transform -rotate-1 bg-black/5 shadow-2xl"
                     >
                       <div
                         className="w-full h-full bg-cover bg-center"
@@ -167,7 +167,7 @@ const Home = () => {
                       initial={{ y: 10, scale: 0.995, opacity: 0 }}
                       animate={{ y: 0, scale: 1, opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.1 }}
-                      className="absolute top-0 right-0 w-full h-full rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl bg-black"
+                      className="absolute top-0 right-0 w-full h-full rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl bg-black"
                     >
                       <div
                         className="w-full h-full bg-contain bg-center bg-no-repeat relative"

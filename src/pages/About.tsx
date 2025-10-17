@@ -1,6 +1,9 @@
+// MiniCarousel component above About
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Award, Users, Target, TrendingUp, CheckCircle } from 'lucide-react';
 import { useRef } from 'react';
+import MiniCarousel from '../components/MiniCarousel';
+
 
 const milestones = [
   { year: '1985', title: 'Company Founded', description: 'Started with a vision to revolutionize cutting tool manufacturing' },
@@ -92,13 +95,19 @@ const About = () => {
               className="relative h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 shadow-2xl"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-transparent"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl font-bold text-white mb-2">Img</div>
-                  <div className="text-xl text-slate-300">Years of Excellence</div>
-                </div>
-              </div>
+              <div
+                className="absolute inset-0 w-full h-full bg-cover bg-center"
+                style={{ backgroundImage: `url(/src/assets/images/about/about-story.webp)` }}
+                aria-label="Paramount Cutting Tools Factory"
+              />
+              {/* Mini carousel in left bottom */}
+              <MiniCarousel />
             </motion.div>
+// ...existing code...
+
+
+function MiniCarousel() {
+}
           </motion.div>
 
           <motion.div

@@ -1,72 +1,36 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Filter, Search } from 'lucide-react';
+import Product1 from '../assets/images/products/product-1.png';
+import Product2 from '../assets/images/products/product-2.webp';
+import Product3 from '../assets/images/products/Products-3.jpg';
 
 const categories = ['All', 'HSS Tools', 'Carbide Tools', 'Milling Cutters', 'Drill Bits', 'Reamers', 'Custom'];
 
 const products = [
   {
     id: 1,
-    name: 'HSS Twist Drill',
-    category: 'HSS Tools',
-    description: 'High-speed steel twist drills for precision drilling operations',
+    name: 'Precision Machined Industrial Components',
+    category: 'Metal components',
+    description: 'A diverse assortment of precision-machined metal parts, including couplings, shafts, and threaded connectors.',
     specs: 'Dia: 1-50mm | Material: M2 HSS',
+    image: Product1,
   },
   {
     id: 2,
-    name: 'Carbide End Mill',
-    category: 'Carbide Tools',
-    description: 'Premium carbide end mills for high-performance milling',
+    name: 'ISO CBN Inserts and Customized Types',
+    category: 'Carbide Inserts',
+    description: 'Various ISO CBN cutting inserts (CCGW, CNGA, DCGW, etc.) designed for precision machining tasks.',
     specs: 'Dia: 3-25mm | Flutes: 2/4',
+    image: Product2,
   },
   {
     id: 3,
-    name: 'Shell End Mill',
-    category: 'Milling Cutters',
-    description: 'Heavy-duty shell end mills for face milling applications',
+    name: 'Precision CNC Machining with Splined Tool',
+    category: 'Milling',
+    description: 'A splined cutting tool held in a tool holder is poised for or engaged in precision machining on a metal plate.',
     specs: 'Dia: 40-100mm | Insert Type: APKT',
-  },
-  {
-    id: 4,
-    name: 'Straight Flute Drill',
-    category: 'Drill Bits',
-    description: 'Precision ground straight flute drills for accurate holes',
-    specs: 'Dia: 0.5-20mm | Tolerance: h7',
-  },
-  {
-    id: 5,
-    name: 'Machine Reamer',
-    category: 'Reamers',
-    description: 'High precision reamers for finishing operations',
-    specs: 'Dia: 3-50mm | Finish: Mirror Polish',
-  },
-  {
-    id: 6,
-    name: 'Custom Form Tool',
-    category: 'Custom',
-    description: 'Tailor-made cutting tools designed to your specifications',
-    specs: 'Made to Order | Any Configuration',
-  },
-  {
-    id: 7,
-    name: 'HSS Slot Drill',
-    category: 'HSS Tools',
-    description: 'Versatile slot drills for slotting and profiling',
-    specs: 'Dia: 2-20mm | 2 Flute Design',
-  },
-  {
-    id: 8,
-    name: 'Carbide Drill',
-    category: 'Carbide Tools',
-    description: 'Solid carbide drills for high-speed drilling',
-    specs: 'Dia: 3-20mm | Point Angle: 140°',
-  },
-  {
-    id: 9,
-    name: 'Face Mill',
-    category: 'Milling Cutters',
-    description: 'Indexable face mills for surface finishing',
-    specs: 'Dia: 50-200mm | Insert: APKT/RPMT',
+    image: Product3,
   },
 ];
 
@@ -99,7 +63,7 @@ const Products = () => {
             </p>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -120,9 +84,9 @@ const Products = () => {
               <Filter className="h-5 w-5 text-slate-400" />
               <span className="text-slate-400 text-sm">Filter:</span>
             </div>
-          </motion.div>
+          </motion.div> */}
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -143,11 +107,11 @@ const Products = () => {
                 {category}
               </motion.button>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 
-      <section className="py-16 bg-slate-950">
+      <section className="bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             layout
@@ -166,12 +130,12 @@ const Products = () => {
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-500/10 to-transparent rounded-bl-full"></div>
 
-                <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center overflow-hidden">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg transform rotate-12"
-                  ></motion.div>
+                <div className="relative h-72 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover rounded-lg shadow-lg bg-white/10"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-50"></div>
                 </div>
 
@@ -189,7 +153,7 @@ const Products = () => {
                     {product.description}
                   </p>
 
-                  <div className="flex items-center justify-between pt-4 border-t border-slate-700">
+                  {/* <div className="flex items-center justify-between pt-4 border-t border-slate-700">
                     <span className="text-xs text-slate-500">{product.specs}</span>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
@@ -198,7 +162,7 @@ const Products = () => {
                     >
                       View Details
                     </motion.button>
-                  </div>
+                  </div> */}
                 </div>
 
                 <motion.div
