@@ -2,22 +2,27 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Drill, Cog, Wrench, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import solidCarbide from '../assets/images/solid carbide-1.png';
+import precise from '../assets/images/precise-2.png';
+import highSpeed from '../assets/images/high-speed-3.png';
+import cermet from '../assets/images/cermet-and-pcd-4.png';
 
 const heroSlides = [
   {
-    title: 'Precision Beyond Limits',
-    subtitle: 'Engineering Excellence in Every Cut',
-    description: 'Industry-leading cutting tools designed for unmatched precision and durability',
+    img: solidCarbide,
+    title: 'The solid carbide all types of precision tools',
   },
   {
-    title: 'Innovating the Future',
-    subtitle: 'Next-Generation Manufacturing',
-    description: 'Advanced technology meets traditional craftsmanship in our cutting solutions',
+    img: precise,
+    title: 'Precise, reliable and customized form cutter',
   },
   {
-    title: 'Built for Performance',
-    subtitle: 'Trusted by Industry Leaders',
-    description: 'Delivering superior quality tools that exceed the highest standards',
+    img: highSpeed,
+    title: 'High speed spl pcd reamer and combination tool',
+  },
+  {
+    img: cermet,
+    title: 'High speed expendable reamer carbide, cermet and pcd',
   },
 ];
 
@@ -54,6 +59,8 @@ const Home = () => {
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+  const prevIndex = (currentSlide - 1 + heroSlides.length) % heroSlides.length;
+  const nextIndex = (currentSlide + 1) % heroSlides.length;
 
   return (
     <div className="min-h-screen bg-slate-950">
@@ -65,40 +72,94 @@ const Home = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.7 }}
-            className="relative h-full flex items-center justify-center"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.6 }}
+            className="relative h-full w-full flex items-center"
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-              >
-                <h2 className="text-orange-500 text-sm md:text-base font-semibold tracking-wider uppercase mb-4">
-                  {heroSlides[currentSlide].subtitle}
-                </h2>
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-                  {heroSlides[currentSlide].title}
-                </h1>
-                <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto mb-8">
-                  {heroSlides[currentSlide].description}
-                </p>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Link
-                    to="/products"
-                    className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300"
+            <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="text-left md:pr-8">
+                  <motion.h2
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-orange-400 text-sm md:text-base font-semibold uppercase tracking-wider mb-4"
                   >
-                    <span>Explore Products</span>
-                    <ArrowRight className="h-5 w-5" />
-                  </Link>
-                </motion.div>
-              </motion.div>
+                    Premium Solutions
+                  </motion.h2>
+
+                  <motion.h1
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.1, duration: 0.6 }}
+                    className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6"
+                  >
+                    {heroSlides[currentSlide].title}
+                  </motion.h1>
+
+                  <motion.div
+                    initial={{ x: -10, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.3, duration: 0.6 }}
+                    className="mt-4"
+                  >
+                    <Link
+                      to="/products"
+                      className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300"
+                    >
+                      <span>Explore Products</span>
+                      <ArrowRight className="h-5 w-5" />
+                    </Link>
+                  </motion.div>
+                </div>
+
+                <div className="flex justify-center md:justify-end">
+                  <div className="relative w-full max-w-md md:max-w-lg h-[380px] md:h-[520px]">
+                    <motion.div
+                      initial={{ scale: 0.98, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 0.9 }}
+                      transition={{ duration: 0.6 }}
+                      className="absolute top-12 right-6 w-full h-full rounded-3xl overflow-hidden border-2 border-white/10 transform rotate-3 bg-black/5 shadow-lg"
+                    >
+                      <div
+                        className="w-full h-full bg-cover bg-center"
+                        style={{ backgroundImage: `url(${heroSlides[nextIndex].img})` }}
+                        aria-hidden="true"
+                      />
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ scale: 0.99, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 0.95 }}
+                      transition={{ duration: 0.6, delay: 0.05 }}
+                      className="absolute top-6 right-3 w-full h-full rounded-3xl overflow-hidden border-2 border-white/15 transform -rotate-1 bg-black/5 shadow-2xl"
+                    >
+                      <div
+                        className="w-full h-full bg-cover bg-center"
+                        style={{ backgroundImage: `url(${heroSlides[prevIndex].img})` }}
+                        aria-hidden="true"
+                      />
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ y: 10, scale: 0.995, opacity: 0 }}
+                      animate={{ y: 0, scale: 1, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
+                      className="absolute top-0 right-0 w-full h-full rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl bg-black"
+                    >
+                      <div
+                        className="w-full h-full bg-cover bg-center relative"
+                        style={{ backgroundImage: `url(${heroSlides[currentSlide].img})` }}
+                        role="img"
+                        aria-label={heroSlides[currentSlide].title}
+                      >
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
@@ -108,9 +169,8 @@ const Home = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'w-8 bg-orange-500' : 'w-2 bg-slate-600'
-              }`}
+              className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide ? 'w-8 bg-orange-500' : 'w-2 bg-slate-600'
+                }`}
             />
           ))}
         </div>
