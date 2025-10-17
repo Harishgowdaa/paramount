@@ -38,7 +38,7 @@ const heroSlides = [
   },
   {
     img: hob,
-    title: 'Hob ,fir tree and port tools',
+    title: 'Hob, fir tree and port tools',
   },
   {
     img: FineBoring,
@@ -83,7 +83,7 @@ const Home = () => {
   const nextIndex = (currentSlide + 1) % heroSlides.length;
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen md:m bg-slate-950">
       <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDI1NSwxNTUsMCwwLjEpIi8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
@@ -135,8 +135,8 @@ const Home = () => {
                   </motion.div>
                 </div>
 
-                <div className="flex justify-center md:justify-end">
-                  <div className="relative w-full max-w-xl md:max-w-2xl h-[350px] md:h-[450px] xl:h-[500px]">
+                <div className="flex justify-center md:justify-end h-[300px] sm:h-[350px] lg:h-[400px] mt-16 xl:h-[480px]" >
+                  <div className=" relative w-full max-w-xl md:max-w-2xl h-[350px] mr-5">
                     <motion.div
                       initial={{ scale: 0.98, opacity: 0 }}
                       animate={{ scale: 1, opacity: 0.9 }}
