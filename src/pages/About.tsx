@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Award, Users, Target, TrendingUp, CheckCircle } from 'lucide-react';
 import { useRef } from 'react';
 import MiniCarousel from '../components/MiniCarousel';
+import aboutStory from '../assets/images/about/about-story.webp';
 
 
 const milestones = [
@@ -121,7 +122,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-transparent"></div>
               <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: `url(/src/assets/images/about/about-story.webp)` }}
+                style={{ backgroundImage: `url(${aboutStory})` }}
                 aria-label="Paramount Cutting Tools Factory"
               />
               {/* Mini carousel in left bottom */}
