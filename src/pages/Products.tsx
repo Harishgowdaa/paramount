@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Filter, Search } from 'lucide-react';
 import Product1 from '../assets/images/products/product-1.png';
 import Product2 from '../assets/images/products/product-2.webp';
-import Product3 from '../assets/images/products/Products-3.jpg';
+import Product3 from '../assets/images/products/products-3.jpg';
 import Product4 from '../assets/images/products/Twist-Drill.png';
 import Product5 from '../assets/images/products/Solid-carbide-end-mills.png';
 import Product6 from '../assets/images/products/customtoolpic.png';
