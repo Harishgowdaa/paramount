@@ -3,40 +3,34 @@ import { Linkedin, Mail } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: 'Rajesh Kumar',
-    position: 'Chief Executive Officer',
-    description: 'Visionary leader with 25+ years in precision manufacturing',
+    name: 'Pavithra',
+    position: 'Proprietor',
+    description: 'Leading the organization with strong vision and commitment.',
     color: 'from-blue-500 to-cyan-500',
   },
   {
-    name: 'Priya Sharma',
-    position: 'Chief Technology Officer',
-    description: 'Expert in cutting-edge manufacturing technologies and innovation',
+    name: 'Kumar',
+    position: 'Sales & Application',
+    description: 'Driving sales growth and delivering customer-focused solutions.',
     color: 'from-orange-500 to-red-500',
   },
   {
-    name: 'Amit Patel',
-    position: 'Head of Operations',
-    description: 'Streamlining production processes for maximum efficiency',
+    name: 'Arun Kumar',
+    position: 'Production Head',
+    description: 'Overseeing production operations with precision and efficiency.',
     color: 'from-green-500 to-emerald-500',
   },
   {
-    name: 'Sneha Reddy',
-    position: 'Quality Assurance Director',
-    description: 'Ensuring every product meets the highest quality standards',
+    name: 'Madhu',
+    position: 'Quality Engineer',
+    description: 'Ensuring top-tier quality standards at every stage of production.',
     color: 'from-purple-500 to-pink-500',
   },
   {
-    name: 'Vikram Singh',
-    position: 'Sales & Marketing Head',
-    description: 'Building relationships and expanding global market presence',
+    name: 'Dhanviksha',
+    position: 'Accounts Head',
+    description: 'Managing financial operations with accuracy and responsibility.',
     color: 'from-yellow-500 to-orange-500',
-  },
-  {
-    name: 'Neha Gupta',
-    position: 'R&D Manager',
-    description: 'Pioneering next-generation cutting tool solutions',
-    color: 'from-indigo-500 to-blue-500',
   },
 ];
 

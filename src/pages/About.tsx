@@ -6,12 +6,33 @@ import MiniCarousel from '../components/MiniCarousel';
 
 
 const milestones = [
-  { year: '1985', title: 'Company Founded', description: 'Started with a vision to revolutionize cutting tool manufacturing' },
-  { year: '1995', title: 'First Export', description: 'Expanded operations to international markets' },
-  { year: '2005', title: 'ISO Certified', description: 'Achieved ISO 9001:2000 certification for quality management' },
-  { year: '2015', title: 'Innovation Hub', description: 'Established R&D center for advanced tool development' },
-  { year: '2025', title: 'Industry Leader', description: 'Recognized as a leading manufacturer with global presence' },
+  {
+    year: '2019',
+    title: 'Company Started',
+    description: 'Began operations as a small state-level startup with a focus on quality manufacturing.'
+  },
+  {
+    year: '2020',
+    title: 'Early Growth',
+    description: 'Started building a local customer base and refining our product capabilities.'
+  },
+  {
+    year: '2022',
+    title: 'Process Improvements',
+    description: 'Enhanced production processes and expanded our team to support growing demand.'
+  },
+  {
+    year: '2024',
+    title: 'Steady Expansion',
+    description: 'Increased presence across the state and strengthened relationships with industry partners.'
+  },
+  {
+    year: '2025',
+    title: 'Looking Ahead',
+    description: 'Continuing to grow with a focus on innovation, reliability, and long-term development.'
+  },
 ];
+
 
 const values = [
   { icon: Award, title: 'Quality Excellence', description: 'Uncompromising commitment to superior quality in every product' },
@@ -76,17 +97,20 @@ const About = () => {
               <div className="space-y-4 text-slate-300 leading-relaxed">
                 <p>
                   Paramount Cutting Tools has been at the forefront of precision manufacturing,
-                  delivering cutting-edge solutions to industries worldwide. What started as a small workshop has
-                  evolved into a state-of-the-art facility equipped with the latest technology.
+                  delivering cutting-edge solutions to industries India. What started as a small
+                  workshop has evolved into a state-of-the-art facility equipped with the latest
+                  technology.
                 </p>
                 <p>
-                  Our journey has been marked by relentless innovation and an unwavering commitment to quality.
-                  We've continuously invested in research, technology, and our people to ensure we stay ahead
-                  of industry demands and exceed customer expectations.
+                  Our journey has been marked by relentless innovation and an unwavering
+                  commitment to quality. We&#39;ve continuously invested in research, technology,
+                  and our people to ensure we stay ahead of industry demands and exceed
+                  customer expectations.
                 </p>
                 <p>
-                  Today, we serve clients across multiple continents, providing customized cutting tool solutions
-                  that power manufacturing operations in automotive, aerospace, defense, and general engineering sectors.
+                  Today, we serve clients across multiple continents, providing customized
+                  cutting tool solutions that power manufacturing operations in automotive,
+                  aerospace, defense, and general engineering sectors.
                 </p>
               </div>
             </div>
@@ -103,11 +127,6 @@ const About = () => {
               {/* Mini carousel in left bottom */}
               <MiniCarousel />
             </motion.div>
-// ...existing code...
-
-
-function MiniCarousel() {
-}
           </motion.div>
 
           <motion.div

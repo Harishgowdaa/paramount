@@ -14,37 +14,38 @@ import  FineBoring from '../assets/images/Fine-Boring-8.png';
 const heroSlides = [
   {
     img: solidCarbide,
-    title: 'Solid carbide all types of precision tools',
+    title: 'Solid Carbide All Types Of Precision Tools',
   },
   {
     img: precise,
-    title: 'Precise, reliable and customized form cutter',
+    title: 'Precise, Reliable And Customized Form Cutter',
   },
   {
     img: highSpeed,
-    title: 'High speed spl pcd reamer and combination tool',
+    title: 'High Speed Spl Pcd Reamer And Combination Tool',
   },
   {
     img: cermet,
-    title: 'High speed expendable reamer carbide, cermet and pcd',
+    title: 'High Speed Expendable Reamer Carbide, Cermet And Pcd',
   },
   {
     img: threadmill,
-    title: 'Spl solid carbide thread mill and boring tools',
+    title: 'Spl Solid Carbide Thread Mill And Boring Tools',
   },
   {
     img: customizedsplinserts,
-    title: 'Customized spl inserts',
+    title: 'Customized Spl Inserts',
   },
   {
     img: hob,
-    title: 'Hob, fir tree and port tools',
+    title: 'Hob, Fir Tree And Port Tools',
   },
   {
     img: FineBoring,
-    title: 'Competence Reaming and Fine Boring',
+    title: 'Competence Reaming And Fine Boring',
   },
 ];
+
 
 const products = [
   {

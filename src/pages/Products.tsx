@@ -4,6 +4,9 @@ import { Filter, Search } from 'lucide-react';
 import Product1 from '../assets/images/products/product-1.png';
 import Product2 from '../assets/images/products/product-2.webp';
 import Product3 from '../assets/images/products/Products-3.jpg';
+import Product4 from '../assets/images/products/Twist-Drill.png';
+import Product5 from '../assets/images/products/Solid-carbide-end-mills.png';
+import Product6 from '../assets/images/products/customtoolpic.png';
 
 const categories = ['All', 'HSS Tools', 'Carbide Tools', 'Milling Cutters', 'Drill Bits', 'Reamers', 'Custom'];
 
@@ -32,6 +35,32 @@ const products = [
     specs: 'Dia: 40-100mm | Insert Type: APKT',
     image: Product3,
   },
+  {
+    id: 4,
+    name: 'High-Performance Twist Drill',
+    category: 'Drill',
+    description: 'Durable twist drill designed for precise hole-making in metals and alloys.',
+    specs: 'Dia: 1–20mm | Material: HSS / Carbide',
+    image: Product4,
+  },
+
+  {
+    id: 5,
+    name: 'Solid Carbide Endmill',
+    category: 'Endmill',
+    description: 'High-speed solid carbide endmill engineered for superior cutting efficiency.',
+    specs: 'Flutes: 2/4/6 | Coating: TiAlN',
+    image: Product5,
+  },
+
+  {
+    id: 6,
+    name: 'Custom Profile Cutter',
+    category: 'Profile Cutter',
+    description: 'Specialized profile cutter designed for custom machining applications.',
+    specs: 'Custom shapes | Material: HSS / Carbide',
+    image: Product6,
+  },
 ];
 
 const Products = () => {
@@ -41,7 +70,7 @@ const Products = () => {
   const filteredProducts = products.filter((product) => {
     const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          product.description.toLowerCase().includes(searchTerm.toLowerCase());
+      product.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
