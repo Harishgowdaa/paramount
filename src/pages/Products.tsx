@@ -173,8 +173,10 @@ const Products = () => {
                     <h3 className="text-xl font-bold text-white group-hover:text-[#A6CE39] transition-colors">
                       {product.name}
                     </h3>
-                    <span className="text-xs bg-[#A6CE39]/20 text-[#A6CE39] px-2 py-1 rounded-full">
-                      {product.category}
+                    <span className="text-xs bg-[#A6CE39]/20 text-[#A6CE39] px-2 py-1 rounded-full inline-block">
+                      <div className="site-marquee w-[7rem] sm:w-[10rem] md:w-auto">
+                        <span className="site-marquee-inner inline-block">{product.category}</span>
+                      </div>
                     </span>
                   </div>
 
