@@ -12,7 +12,7 @@ const teamMembers = [
     name: 'Kumar',
     position: 'Sales & Application',
     description: 'Driving sales growth and delivering customer-focused solutions.',
-    color: 'from-orange-500 to-red-500',
+    color: 'from-[#A6CE39] to-red-500',
   },
   {
     name: 'Arun Kumar',
@@ -30,7 +30,7 @@ const teamMembers = [
     name: 'Dhanviksha',
     position: 'Accounts Head',
     description: 'Managing financial operations with accuracy and responsibility.',
-    color: 'from-yellow-500 to-orange-500',
+    color: 'from-yellow-500 to-[#A6CE39]',
   },
 ];
 
@@ -46,7 +46,7 @@ const Team = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-              Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">Team</span>
+              Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A6CE39] to-[#A6CE39]">Team</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               The brilliant minds behind our success and innovation
@@ -62,7 +62,7 @@ const Team = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all"
+                className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-[#A6CE39]/50 transition-all"
               >
                 <div className="relative h-80 bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden">
                   <motion.div
@@ -79,31 +79,31 @@ const Team = () => {
                     </motion.div>
                   </div>
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex space-x-4">
                       <motion.a
                         whileHover={{ scale: 1.2, y: -5 }}
                         href="#"
-                        className="bg-slate-800 p-3 rounded-full hover:bg-orange-500 transition-colors"
+                        className="bg-slate-800 p-3 rounded-full hover:bg-[#A6CE39] transition-colors"
                       >
                         <Linkedin className="h-5 w-5 text-white" />
                       </motion.a>
                       <motion.a
                         whileHover={{ scale: 1.2, y: -5 }}
                         href="#"
-                        className="bg-slate-800 p-3 rounded-full hover:bg-orange-500 transition-colors"
+                        className="bg-slate-800 p-3 rounded-full hover:bg-[#A6CE39] transition-colors"
                       >
                         <Mail className="h-5 w-5 text-white" />
                       </motion.a>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#A6CE39] transition-colors">
                     {member.name}
                   </h3>
-                  <p className="text-orange-500 font-semibold mb-3">
+                  <p className="text-[#A6CE39] font-semibold mb-3">
                     {member.position}
                   </p>
                   <p className="text-slate-400 text-sm leading-relaxed">
@@ -111,7 +111,7 @@ const Team = () => {
                   </p>
                 </div>
 
-                <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-orange-500/10 to-transparent rounded-full blur-xl"></div>
+                <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-[#A6CE39]/10 to-transparent rounded-full blur-xl"></div>
               </motion.div>
             ))}
           </div>
@@ -134,7 +134,7 @@ const Team = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300"
+              className="bg-gradient-to-r from-[#A6CE39] to-[#A6CE39] text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:shadow-[#A6CE39]/50 transition-all duration-300"
             >
               View Open Positions
             </motion.button>
@@ -164,7 +164,7 @@ const Team = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-8 text-center border border-slate-700"
               >
-                <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600 mb-2">
+                <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#A6CE39] to-[#A6CE39] mb-2">
                   {stat.number}
                 </div>
                 <div className="text-slate-400">{stat.label}</div>

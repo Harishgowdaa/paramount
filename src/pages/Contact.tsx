@@ -37,7 +37,7 @@ const Contact = () => {
       icon: Phone,
       title: 'Phone',
       details: '+91 9900858297',
-      color: 'from-orange-500 to-red-500',
+      color: 'from-[#A6CE39] to-red-500',
     },
     {
       icon: Mail,
@@ -64,7 +64,7 @@ const Contact = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-              Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">Touch</span>
+              Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A6CE39] to-[#A6CE39]">Touch</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Have a question or need assistance? We're here to help
@@ -79,7 +79,7 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 border border-slate-700 hover:border-orange-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 border border-slate-700 hover:border-[#A6CE39] transition-all"
               >
                 <motion.div
                   whileHover={{ scale: 1.1, }}
@@ -118,7 +118,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#A6CE39] transition-colors"
                       placeholder="John Doe"
                     />
                   </div>
@@ -132,7 +132,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#A6CE39] transition-colors"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -148,7 +148,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#A6CE39] transition-colors"
                       placeholder="+91 98765 43210"
                     />
                   </div>
@@ -162,7 +162,7 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#A6CE39] transition-colors"
                       placeholder="Product Inquiry"
                     />
                   </div>
@@ -178,7 +178,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors resize-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#A6CE39] transition-colors resize-none"
                     placeholder="Tell us more about your requirements..."
                   />
                 </div>
@@ -188,7 +188,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-to-r from-[#A6CE39] to-[#A6CE39] text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:shadow-[#A6CE39]/50 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                   <Send className="h-5 w-5" />
@@ -207,7 +207,7 @@ const Contact = () => {
               <div className="relative h-[500px] rounded-2xl overflow-hidden bg-slate-800 border border-slate-700">
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-700 to-slate-800">
                   <div className="text-center">
-                    <MapPin className="h-16 w-16 text-orange-500 mx-auto mb-4" />
+                    <MapPin className="h-16 w-16 text-[#A6CE39] mx-auto mb-4" />
                     <p className="text-slate-300 text-lg">Map View</p>
                     <p className="text-slate-500 text-sm mt-2">
                       D-426, 1st Floor, 10th Main road, <br/> 2nd Stage, Peenya,
@@ -228,7 +228,7 @@ const Contact = () => {
                 <p className="text-slate-400 mb-4">
                   Our team typically responds within 24 hours during business days. For urgent inquiries, please call us directly.
                 </p>
-                <div className="flex items-center space-x-2 text-orange-500">
+                <div className="flex items-center space-x-2 text-[#A6CE39]">
                   <Phone className="h-5 w-5" />
                   <span className="font-semibold">+91 99008 58297</span>
                 </div>

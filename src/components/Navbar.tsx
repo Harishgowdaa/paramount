@@ -49,10 +49,22 @@ const Navbar = () => {
               />
             </motion.div>
 
-            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold 
-              bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-              Paramount Cutting Tools
-            </span>
+            <div className="flex flex-col leading-tight max-w-max">
+              <span
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold 
+      bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent"
+              >
+                Paramount Cutting Tools
+              </span>
+
+              <span
+                className="self-end text-[10px] sm:text-xs md:text-sm tracking-wide mt-1"
+                style={{ color: '#A6CE39' }}
+              >
+                Precision in Every Cut
+              </span>
+            </div>
+
           </Link>
 
           {/* DESKTOP NAV LINKS */}
@@ -61,14 +73,14 @@ const Navbar = () => {
               <Link key={link.path} to={link.path} className="relative group">
                 <span
                   className={`text-base lg:text-lg font-medium transition-colors duration-200 ${location.pathname === link.path
-                    ? 'text-orange-500'
-                    : 'text-slate-200 hover:text-orange-400'
+                    ? 'text-[#A6CE39]'
+                    : 'text-slate-200 hover:text-[#A6CE39]'
                     }`}
                 >
                   {link.name}
                 </span>
                 <motion.div
-                  className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600"
+                  className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-[#A6CE39] to-[#A6CE39]"
                   initial={{ width: 0 }}
                   animate={{ width: location.pathname === link.path ? '100%' : 0 }}
                   whileHover={{ width: '100%' }}
@@ -102,7 +114,7 @@ const Navbar = () => {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`block py-3 px-5 rounded-lg text-lg transition-colors ${location.pathname === link.path
-                  ? 'bg-orange-500/20 text-orange-400'
+                  ? 'bg-[#A6CE39] text-[#A6CE39]'
                   : 'text-slate-200 hover:bg-slate-800'
                   }`}
               >

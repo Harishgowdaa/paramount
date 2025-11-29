@@ -13,7 +13,7 @@ const NotFound = () => {
           className="text-center"
         >
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8">
-            4<span className="text-orange-500">0</span>4
+            4<span className="text-[#A6CE39]">0</span>4
           </h1>
           <p className="text-2xl text-slate-300 mb-8">
             Oops! The page you're looking for isn't here.
@@ -21,7 +21,7 @@ const NotFound = () => {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               to="/"
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#A6CE39] to-[#A6CE39] text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:shadow-[#A6CE39]/50 transition-all duration-300"
             >
               <Home className="h-5 w-5" />
               <span>Back to Home</span>

@@ -63,7 +63,7 @@ const products = [
     icon: Cog,
     name: 'Carbide Solutions',
     description: 'Premium carbide tools offering exceptional hardness and wear resistance.',
-    color: 'from-orange-500 to-red-500',
+    color: 'from-[#A6CE39] to-red-500',
   },
   {
     icon: Wrench,
@@ -110,7 +110,7 @@ const Home = () => {
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="text-orange-400 text-xs md:text-sm font-semibold uppercase tracking-wider mb-3"
+                    className="text-[#A6CE39] text-xs md:text-sm font-semibold uppercase tracking-wider mb-3"
                   >
                     Precision Engineering
                   </motion.h2>
@@ -131,7 +131,7 @@ const Home = () => {
                   >
                     <Link
                       to="/products"
-                      className="inline-flex items-center space-x-2 bg-orange-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-orange-500 transition-all"
+                      className="inline-flex items-center space-x-2 bg-[#A6CE39] text-white px-5 py-2.5 rounded-lg font-medium hover:bg-[#A6CE39] transition-all"
                     >
                       <span>Explore Products</span>
                       <ArrowRight className="h-4 w-4" />
@@ -164,7 +164,7 @@ const Home = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide ? 'w-6 bg-orange-500' : 'w-2 bg-slate-600'
+              className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide ? 'w-6 bg-[#A6CE39]' : 'w-2 bg-slate-600'
                 }`}
             />
           ))}
@@ -210,7 +210,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2, duration: 0.6 }}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 overflow-hidden hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300"
+                className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 overflow-hidden hover:shadow-2xl hover:shadow-[#A6CE39]/20 transition-all duration-300"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
 
@@ -222,7 +222,7 @@ const Home = () => {
                   <product.icon className="h-8 w-8 text-white" />
                 </motion.div>
 
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#A6CE39] transition-colors">
                   {product.name}
                 </h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">
@@ -231,14 +231,14 @@ const Home = () => {
 
                 <motion.a
                   href="#"
-                  className="inline-flex items-center space-x-2 text-orange-500 font-semibold group-hover:text-orange-400"
+                  className="inline-flex items-center space-x-2 text-[#A6CE39] font-semibold group-hover:text-[#A6CE39]"
                   whileHover={{ x: 5 }}
                 >
                   <span>Learn More</span>
                   <ArrowRight className="h-4 w-4" />
                 </motion.a>
 
-                <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-orange-500/10 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-[#A6CE39]/10 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
               </motion.div>
             ))}
           </div>

@@ -70,7 +70,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6"
             >
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">Paramount</span>
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A6CE39] to-[#A6CE39]">Paramount</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -119,7 +119,7 @@ const About = () => {
               whileHover={{ scale: 1.02 }}
               className="relative h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 shadow-2xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#A6CE39] to-transparent"></div>
               <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${aboutStory})` }}
@@ -139,7 +139,7 @@ const About = () => {
           >
             <h2 className="text-4xl font-bold text-white text-center mb-12">Our Journey</h2>
             <div className="relative">
-              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-orange-600 -translate-x-1/2 hidden md:block"></div>
+              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#A6CE39] to-[#A6CE39] -translate-x-1/2 hidden md:block"></div>
 
               {milestones.map((milestone, index) => (
                 <motion.div
@@ -151,13 +151,13 @@ const About = () => {
                   className={`flex items-center mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                 >
                   <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>
-                    <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700 hover:border-orange-500/50 transition-colors">
-                      <div className="text-orange-500 font-bold text-2xl mb-2">{milestone.year}</div>
+                    <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700 hover:border-[#A6CE39] transition-colors">
+                      <div className="text-[#A6CE39] font-bold text-2xl mb-2">{milestone.year}</div>
                       <h3 className="text-white font-bold text-xl mb-2">{milestone.title}</h3>
                       <p className="text-slate-400">{milestone.description}</p>
                     </div>
                   </div>
-                  <div className="hidden md:block w-4 h-4 bg-orange-500 rounded-full border-4 border-slate-950 z-10"></div>
+                  <div className="hidden md:block w-4 h-4 bg-[#A6CE39] rounded-full border-4 border-slate-950 z-10"></div>
                   <div className="flex-1"></div>
                 </motion.div>
               ))}
@@ -180,12 +180,12 @@ const About = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-orange-500/50 transition-all"
+                  className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-[#A6CE39] transition-all"
                 >
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="bg-gradient-to-br from-orange-500 to-orange-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                    className="bg-gradient-to-br from-[#A6CE39] to-[#A6CE39] w-12 h-12 rounded-lg flex items-center justify-center mb-4"
                   >
                     <value.icon className="h-6 w-6 text-white" />
                   </motion.div>
@@ -205,7 +205,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-12 text-center"
+            className="bg-gradient-to-br from-[#A6CE39] to-[#A6CE39] rounded-2xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">

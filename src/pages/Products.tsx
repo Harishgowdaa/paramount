@@ -85,7 +85,7 @@ const Products = () => {
             className="text-center mb-12"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">Products</span>
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A6CE39] to-[#A6CE39]">Products</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Precision-engineered cutting tools for every manufacturing need
@@ -105,7 +105,7 @@ const Products = () => {
                 placeholder="Search products..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-slate-800 border border-slate-700 rounded-lg pl-12 pr-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 transition-colors"
+                className="w-full bg-slate-800 border border-slate-700 rounded-lg pl-12 pr-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-[#A6CE39] transition-colors"
               />
             </div>
 
@@ -129,7 +129,7 @@ const Products = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-lg font-medium transition-all ${
                   selectedCategory === category
-                    ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/50'
+                    ? 'bg-gradient-to-r from-[#A6CE39] to-[#A6CE39] text-white shadow-lg shadow-[#A6CE39]/50'
                     : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
                 }`}
               >
@@ -155,9 +155,9 @@ const Products = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 whileHover={{ y: -10 }}
-                className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all"
+                className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden border border-slate-700 hover:border-[#A6CE39]/50 transition-all"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-500/10 to-transparent rounded-bl-full"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#A6CE39]/10 to-transparent rounded-bl-full"></div>
 
                 <div className="relative h-72 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center overflow-hidden">
                   <img
@@ -170,10 +170,10 @@ const Products = () => {
 
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                    <h3 className="text-xl font-bold text-white group-hover:text-[#A6CE39] transition-colors">
                       {product.name}
                     </h3>
-                    <span className="text-xs bg-orange-500/20 text-orange-400 px-2 py-1 rounded-full">
+                    <span className="text-xs bg-[#A6CE39]/20 text-[#A6CE39] px-2 py-1 rounded-full">
                       {product.category}
                     </span>
                   </div>
@@ -187,7 +187,7 @@ const Products = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="text-orange-500 text-sm font-semibold hover:text-orange-400 transition-colors"
+                      className="text-[#A6CE39] text-sm font-semibold hover:text-[#A6CE39] transition-colors"
                     >
                       View Details
                     </motion.button>
@@ -195,7 +195,7 @@ const Products = () => {
                 </div>
 
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/5 group-hover:to-orange-600/5 transition-all duration-300 pointer-events-none"
+                  className="absolute inset-0 bg-gradient-to-br from-[#A6CE39]/0 to-[#A6CE39]/0 group-hover:from-[#A6CE39]/5 group-hover:to-[#A6CE39]/5 transition-all duration-300 pointer-events-none"
                 ></motion.div>
               </motion.div>
             ))}

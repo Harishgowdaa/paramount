@@ -37,29 +37,29 @@ const Footer = () => {
             <p className="text-sm text-slate-400 mb-4">
               Precision engineering meets innovation. Manufacturing cutting-edge solutions for the mechanical industry since decades.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 href="#"
-                className="bg-slate-800 p-2 rounded-lg hover:bg-orange-500 transition-colors"
+                className="bg-slate-800 p-2 rounded-lg hover:bg-[#A6CE39] transition-colors"
               >
                 <Facebook className="h-5 w-5" />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 href="#"
-                className="bg-slate-800 p-2 rounded-lg hover:bg-orange-500 transition-colors"
+                className="bg-slate-800 p-2 rounded-lg hover:bg-[#A6CE39] transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 href="#"
-                className="bg-slate-800 p-2 rounded-lg hover:bg-orange-500 transition-colors"
+                className="bg-slate-800 p-2 rounded-lg hover:bg-[#A6CE39] transition-colors"
               >
                 <Twitter className="h-5 w-5" />
               </motion.a>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div variants={itemVariants}>
@@ -69,7 +69,7 @@ const Footer = () => {
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase().replace(' ', '-') === 'home' ? '' : item.toLowerCase().replace(' ', '-') === 'our-team' ? 'team' : item.toLowerCase().replace(' ', '-')}`}
-                    className="text-sm hover:text-orange-400 transition-colors inline-block hover:translate-x-1 duration-200"
+                    className="text-sm hover:text-[#A6CE39] transition-colors inline-block hover:translate-x-1 duration-200"
                   >
                     {item}
                   </Link>
@@ -85,7 +85,7 @@ const Footer = () => {
                 <li key={item}>
                   <a
                     href="#"
-                    className="text-sm hover:text-orange-400 transition-colors inline-block hover:translate-x-1 duration-200"
+                    className="text-sm hover:text-[#A6CE39] transition-colors inline-block hover:translate-x-1 duration-200"
                   >
                     {item}
                   </a>
@@ -98,20 +98,20 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                <MapPin className="h-5 w-5 text-[#A6CE39] flex-shrink-0 mt-0.5" />
                 <span className="text-sm">
                   D-426, 1st Floor, 10th Main road, <br/> 2nd Stage, Peenya, Industrial Area, Bangalore - 560058
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-orange-500 flex-shrink-0" />
-                <a href="tel:+919900858297" className="text-sm hover:text-orange-400 transition-colors">
+                <Phone className="h-5 w-5 text-[#A6CE39] flex-shrink-0" />
+                <a href="tel:+919900858297" className="text-sm hover:text-[#A6CE39] transition-colors">
                   +91 9900858297
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-orange-500 flex-shrink-0" />
-                <a href="mailto:tools@paramountco.in" className="text-sm hover:text-orange-400 transition-colors">
+                <Mail className="h-5 w-5 text-[#A6CE39] flex-shrink-0" />
+                <a href="mailto:tools@paramountco.in" className="text-sm hover:text-[#A6CE39] transition-colors">
                   tools@paramountco.in
                 </a>
               </li>
@@ -127,10 +127,10 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Paramount Cutting Tools. All rights reserved.
           </p>
           {/* <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-slate-500 hover:text-orange-400 transition-colors">
+            <a href="#" className="text-sm text-slate-500 hover:text-[#A6CE39] transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-sm text-slate-500 hover:text-orange-400 transition-colors">
+            <a href="#" className="text-sm text-slate-500 hover:text-[#A6CE39] transition-colors">
               Terms of Service
             </a>
           </div> */}
