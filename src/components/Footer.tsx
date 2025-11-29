@@ -20,6 +20,13 @@ const Footer = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const resolvePath = (item: string) => {
+    if (item === 'Home') return '/';
+    if (item === 'About Us') return '/about';
+    if (item === 'Our Team') return '/team';
+    return `/${item.toLowerCase().replace(/\s+/g, '-')}`;
+  };
+
   return (
     <motion.footer
       initial="hidden"
@@ -68,7 +75,7 @@ const Footer = () => {
               {['Home', 'About Us', 'Products', 'Our Team', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
-                    to={`/${item.toLowerCase().replace(' ', '-') === 'home' ? '' : item.toLowerCase().replace(' ', '-') === 'our-team' ? 'team' : item.toLowerCase().replace(' ', '-')}`}
+                    to={resolvePath(item)}
                     className="text-sm hover:text-[#A6CE39] transition-colors inline-block hover:translate-x-1 duration-200"
                   >
                     {item}
