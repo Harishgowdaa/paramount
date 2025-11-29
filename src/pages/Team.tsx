@@ -152,8 +152,8 @@ const Team = () => {
             className="grid md:grid-cols-3 gap-8"
           >
             {[
-              { number: '15+', label: 'Team Members' },
-              { number: '10+', label: 'Years Experience' },
+              { number: '10+', label: 'Team Members' },
+              { number: '6+', label: 'Years Experience' },
               { number: '98%', label: 'Employee Satisfaction' },
             ].map((stat, index) => (
               <motion.div

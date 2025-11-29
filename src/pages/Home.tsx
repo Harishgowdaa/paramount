@@ -9,9 +9,14 @@ import cermet from '../assets/images/cermet-and-pcd-4.png';
 import threadmill from '../assets/images/threadmill-5.png';
 import customizedsplinserts from '../assets/images/customized-spl-inserts-6.png';
 import hob from '../assets/images/hob-7.png';
-import  FineBoring from '../assets/images/Fine-Boring-8.png';
+import FineBoring from '../assets/images/Fine-Boring-8.png';
+import FormTool from '../assets/images/Form-Tool.png';
 
 const heroSlides = [
+  {
+    img: FormTool,
+    title: 'Form Tools Precision Engineered For Excellence',
+  },
   {
     img: solidCarbide,
     title: 'Solid Carbide All Types Of Precision Tools',
@@ -85,37 +90,36 @@ const Home = () => {
 
   return (
     <div className="min-h-screen md:m bg-slate-950">
-      <section className="relative h-screen overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDI1NSwxNTUsMCwwLjEpIi8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
-        </div>
+      <section className="relative h-[90vh] overflow-hidden bg-slate-950">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 opacity-90" />
 
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.6 }}
             className="relative h-full w-full flex items-center"
           >
-            <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div className="text-left md:pr-8">
+            <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 h-full">
+              <div className="grid grid-cols-1 md:grid-cols-10 gap-6 items-center h-full">
+
+                <div className="md:col-span-3 text-left flex flex-col justify-center ml-4 sm:ml-6 md:ml-10">
                   <motion.h2
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-orange-400 text-sm md:text-base font-semibold uppercase tracking-wider mb-4"
+                    transition={{ duration: 0.5 }}
+                    className="text-orange-400 text-xs md:text-sm font-semibold uppercase tracking-wider mb-3"
                   >
-                    Premium Solutions
+                    Precision Engineering
                   </motion.h2>
 
                   <motion.h1
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.1, duration: 0.6 }}
-                    className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6"
+                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug mb-6"
                   >
                     {heroSlides[currentSlide].title}
                   </motion.h1>
@@ -124,76 +128,43 @@ const Home = () => {
                     initial={{ x: -10, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.3, duration: 0.6 }}
-                    className="mt-4"
                   >
                     <Link
                       to="/products"
-                      className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300"
+                      className="inline-flex items-center space-x-2 bg-orange-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-orange-500 transition-all"
                     >
                       <span>Explore Products</span>
-                      <ArrowRight className="h-5 w-5" />
+                      <ArrowRight className="h-4 w-4" />
                     </Link>
                   </motion.div>
                 </div>
 
-                <div className="flex justify-center md:justify-end h-[300px] sm:h-[350px] lg:h-[400px] mt-16 xl:h-[480px]" >
-                  <div className=" relative w-full max-w-xl md:max-w-2xl h-[350px] mr-5">
-                    <motion.div
-                      initial={{ scale: 0.98, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 0.9 }}
-                      transition={{ duration: 0.6 }}
-                      className="absolute top-12 right-6 w-full h-full rounded-[2.5rem] overflow-hidden border-4 border-white transform rotate-3 bg-black/5 shadow-lg"
-                    >
-                      <div
-                        className="w-full h-full bg-cover bg-center"
-                        style={{ backgroundImage: `url(${heroSlides[nextIndex].img})` }}
-                        aria-hidden="true"
-                      />
-                    </motion.div>
-
-                    <motion.div
-                      initial={{ scale: 0.99, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 0.95 }}
-                      transition={{ duration: 0.6, delay: 0.05 }}
-                      className="absolute top-6 right-3 w-full h-full rounded-[2.5rem] overflow-hidden border-4 border-white transform -rotate-1 bg-black/5 shadow-2xl"
-                    >
-                      <div
-                        className="w-full h-full bg-cover bg-center"
-                        style={{ backgroundImage: `url(${heroSlides[prevIndex].img})` }}
-                        aria-hidden="true"
-                      />
-                    </motion.div>
-
-                    <motion.div
-                      initial={{ y: 10, scale: 0.995, opacity: 0 }}
-                      animate={{ y: 0, scale: 1, opacity: 1 }}
-                      transition={{ duration: 0.5, delay: 0.1 }}
-                      className="absolute top-0 right-0 w-full h-full rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl bg-black"
-                    >
-                      <div
-                        className="w-full h-full bg-contain bg-center bg-no-repeat relative"
-                        style={{ 
-                          backgroundImage: `url(${heroSlides[currentSlide].img})`,
-                          backgroundColor: 'rgb(15 23 42)' // slate-900
-                        }}
-                        role="img"
-                        aria-label={heroSlides[currentSlide].title}
-                      >
-                      </div>
-                    </motion.div>
-                  </div>
+                <div className="md:col-span-7 flex justify-center items-center h-full ml-4 sm:ml-6 md:ml-10">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-full h-[60vh] lg:h-[70vh] flex justify-center items-center"
+                  >
+                    <img
+                      src={heroSlides[currentSlide].img}
+                      alt={heroSlides[currentSlide].title}
+                      className="max-w-[95%] h-full object-contain drop-shadow-2xl"
+                    />
+                  </motion.div>
                 </div>
+
               </div>
             </div>
           </motion.div>
         </AnimatePresence>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
           {heroSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide ? 'w-8 bg-orange-500' : 'w-2 bg-slate-600'
+              className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide ? 'w-6 bg-orange-500' : 'w-2 bg-slate-600'
                 }`}
             />
           ))}
@@ -201,15 +172,15 @@ const Home = () => {
 
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm p-3 rounded-full hover:bg-white/20 transition-colors"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 p-2 rounded-full hover:bg-white/20 transition"
         >
-          <ChevronLeft className="h-6 w-6 text-white" />
+          <ChevronLeft className="h-5 w-5 text-white" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm p-3 rounded-full hover:bg-white/20 transition-colors"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 p-2 rounded-full hover:bg-white/20 transition"
         >
-          <ChevronRight className="h-6 w-6 text-white" />
+          <ChevronRight className="h-5 w-5 text-white" />
         </button>
       </section>
 

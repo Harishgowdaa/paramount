@@ -30,38 +30,40 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center space-x-3 group">
+        <div className="flex justify-between items-center h-24 sm:h-24"> {/* Increased height */}
+
+          <Link to="/" className="flex items-center space-x-4 group">
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.07 }}
               transition={{ duration: 0.3 }}
-              className="h-12"
+              className="h-14 sm:h-16 md:h-18 lg:h-20" // Logo bigger & responsive
             >
-              <img src="/LOGO.png" alt="Paramount Cutting Tools Logo" className="h-full w-auto object-contain" />
+              <img
+                src="/LOGO.png"
+                alt="Paramount Cutting Tools Logo"
+                className="h-full w-auto object-contain"
+              />
             </motion.div>
-            <span className="text-xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+
+            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold 
+              bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
               Paramount Cutting Tools
             </span>
           </Link>
 
-          <div className="hidden md:flex space-x-8">
+          {/* DESKTOP NAV LINKS */}
+          <div className="hidden md:flex space-x-10">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="relative group"
-              >
+              <Link key={link.path} to={link.path} className="relative group">
                 <span
-                  className={`text-sm font-medium transition-colors duration-200 ${
-                    location.pathname === link.path
-                      ? 'text-orange-500'
-                      : 'text-slate-200 hover:text-orange-400'
-                  }`}
+                  className={`text-base lg:text-lg font-medium transition-colors duration-200 ${location.pathname === link.path
+                    ? 'text-orange-500'
+                    : 'text-slate-200 hover:text-orange-400'
+                    }`}
                 >
                   {link.name}
                 </span>
@@ -79,9 +81,9 @@ const Navbar = () => {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-3"
           >
-            {isOpen ? <X /> : <Menu />}
+            {isOpen ? <X size={30} /> : <Menu size={30} />}
           </motion.button>
         </div>
       </div>
@@ -93,17 +95,16 @@ const Navbar = () => {
           exit={{ opacity: 0, height: 0 }}
           className="md:hidden bg-slate-900/98 backdrop-blur-md"
         >
-          <div className="px-4 pt-2 pb-6 space-y-3">
+          <div className="px-6 pt-3 pb-6 space-y-3">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block py-2 px-4 rounded-lg transition-colors ${
-                  location.pathname === link.path
-                    ? 'bg-orange-500/20 text-orange-400'
-                    : 'text-slate-200 hover:bg-slate-800'
-                }`}
+                className={`block py-3 px-5 rounded-lg text-lg transition-colors ${location.pathname === link.path
+                  ? 'bg-orange-500/20 text-orange-400'
+                  : 'text-slate-200 hover:bg-slate-800'
+                  }`}
               >
                 {link.name}
               </Link>
