@@ -90,7 +90,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen md:m bg-slate-950">
-      <section className="relative h-[90vh] overflow-hidden bg-slate-950">
+      <section className="relative h-[90vh] overflow-hidden bg-slate-950 pt-24 md:pt-28">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 opacity-90" />
 
         <AnimatePresence mode="wait">
