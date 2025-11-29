@@ -53,6 +53,10 @@ const Contact = () => {
     },
   ];
 
+  const mapQuery = encodeURIComponent(
+    'D-426, 1st Floor, 10th Main road, 2nd Stage, Peenya, Industrial Area, Bangalore - 560058'
+  );
+
   return (
     <div className="min-h-screen bg-slate-950 pt-20">
       <section className="bg-gradient-to-b from-slate-900 to-slate-950 py-20">
@@ -205,16 +209,14 @@ const Contact = () => {
             >
               <h2 className="text-3xl font-bold text-white mb-6">Find Us Here</h2>
               <div className="relative h-[500px] rounded-2xl overflow-hidden bg-slate-800 border border-slate-700">
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-700 to-slate-800">
-                  <div className="text-center">
-                    <MapPin className="h-16 w-16 text-[#A6CE39] mx-auto mb-4" />
-                    <p className="text-slate-300 text-lg">Map View</p>
-                    <p className="text-slate-500 text-sm mt-2">
-                      D-426, 1st Floor, 10th Main road, <br/> 2nd Stage, Peenya,
-                      Industrial Area, Bangalore - 560058
-                    </p>
-                  </div>
-                </div>
+                <iframe
+                  title="Paramount Tools - Peenya, Bangalore"
+                  src={`https://www.google.com/maps?q=${mapQuery}&z=15&output=embed`}
+                  className="w-full h-full border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
 
               <motion.div
