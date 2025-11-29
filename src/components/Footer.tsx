@@ -65,7 +65,7 @@ const Footer = () => {
           <motion.div variants={itemVariants}>
             <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {['Home', 'About Us', 'Products', 'Gallery', 'Our Team', 'Contact'].map((item) => (
+              {['Home', 'About Us', 'Products', 'Our Team', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase().replace(' ', '-') === 'home' ? '' : item.toLowerCase().replace(' ', '-') === 'our-team' ? 'team' : item.toLowerCase().replace(' ', '-')}`}
