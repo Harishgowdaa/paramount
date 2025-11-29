@@ -49,16 +49,17 @@ const Navbar = () => {
               />
             </motion.div>
 
-            <div className="flex flex-col leading-tight max-w-[140px] md:max-w-max overflow-hidden">
-              <span
-                className="text-sm md:text-2xl lg:text-3xl font-extrabold truncate 
-      bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent"
-              >
-                Paramount Cutting Tools
-              </span>
+            <div className="flex flex-col leading-tight max-w-[140px] md:max-w-max">
+              <div className="site-marquee w-[140px] md:w-auto">
+                <span
+                  className="site-marquee-inner text-sm md:text-2xl lg:text-3xl font-extrabold inline-block bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent"
+                >
+                  Paramount Cutting Tools
+                </span>
+              </div>
 
               <span
-                className="hidden md:block self-end text-xs md:text-sm tracking-wide mt-1"
+                className="self-end text-[10px] md:text-sm tracking-wide mt-1"
                 style={{ color: '#A6CE39' }}
               >
                 Precision in Every Cut

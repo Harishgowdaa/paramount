@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.site-marquee {
+	overflow: hidden;
+	position: relative;
+}
+.site-marquee-inner {
+	display: inline-block;
+	white-space: nowrap;
+	padding-left: 100%;
+	animation: site-marquee 8s linear infinite;
+}
+@keyframes site-marquee {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+@media (min-width: 768px) {
+	.site-marquee-inner {
+		animation: none;
+		padding-left: 0;
+		transform: none;
+	}
+}
