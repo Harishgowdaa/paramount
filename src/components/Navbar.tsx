@@ -34,13 +34,13 @@ const Navbar = () => {
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24 sm:h-24"> {/* Increased height */}
+        <div className="flex justify-between items-center h-16 md:h-24"> {/* Responsive height */}
 
-          <Link to="/" className="flex items-center space-x-4 group">
+          <Link to="/" className="flex items-center space-x-2 md:space-x-4 group">
             <motion.div
               whileHover={{ scale: 1.07 }}
               transition={{ duration: 0.3 }}
-              className="h-14 sm:h-16 md:h-18 lg:h-20" // Logo bigger & responsive
+              className="h-10 md:h-14 lg:h-16" // Logo: smaller on mobile, larger on md+
             >
               <img
                 src="/LOGO.png"
@@ -49,16 +49,16 @@ const Navbar = () => {
               />
             </motion.div>
 
-            <div className="flex flex-col leading-tight max-w-max">
+            <div className="flex flex-col leading-tight max-w-[140px] md:max-w-max overflow-hidden">
               <span
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold 
+                className="text-sm md:text-2xl lg:text-3xl font-extrabold truncate 
       bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent"
               >
                 Paramount Cutting Tools
               </span>
 
               <span
-                className="self-end text-[10px] sm:text-xs md:text-sm tracking-wide mt-1"
+                className="hidden md:block self-end text-xs md:text-sm tracking-wide mt-1"
                 style={{ color: '#A6CE39' }}
               >
                 Precision in Every Cut
@@ -94,6 +94,8 @@ const Navbar = () => {
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-white p-3"
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={30} /> : <Menu size={30} />}
           </motion.button>
@@ -114,7 +116,7 @@ const Navbar = () => {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`block py-3 px-5 rounded-lg text-lg transition-colors ${location.pathname === link.path
-                  ? 'bg-[#A6CE39] text-[#A6CE39]'
+                  ? 'bg-[#A6CE39] text-slate-900'
                   : 'text-slate-200 hover:bg-slate-800'
                   }`}
               >
