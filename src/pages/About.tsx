@@ -139,7 +139,7 @@ const About = () => {
           >
             <h2 className="text-4xl font-bold text-white text-center mb-12">Our Journey</h2>
             <div className="relative">
-              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#A6CE39] to-[#A6CE39] -translate-x-1/2 hidden md:block"></div>
+              <div className="absolute top-0 bottom-0 w-1 bg-gradient-to-b from-[#A6CE39] to-[#A6CE39] left-4 md:left-1/2 md:-translate-x-1/2"></div>
 
               {milestones.map((milestone, index) => (
                 <motion.div
@@ -157,7 +157,7 @@ const About = () => {
                       <p className="text-slate-400">{milestone.description}</p>
                     </div>
                   </div>
-                  <div className="hidden md:block w-4 h-4 bg-[#A6CE39] rounded-full border-4 border-slate-950 z-10"></div>
+                  <div className="flex-shrink-0 w-3 h-3 md:w-4 md:h-4 bg-[#A6CE39] rounded-full border-3 md:border-4 border-slate-950 z-10 mx-4"></div>
                   <div className="flex-1"></div>
                 </motion.div>
               ))}
