@@ -53,9 +53,6 @@ const Contact = () => {
     },
   ];
 
-  const mapQuery = encodeURIComponent(
-    'D-426, 1st Floor, 10th Main road, 2nd Stage, Peenya, Industrial Area, Bangalore - 560058'
-  );
 
   return (
     <div className="min-h-screen bg-slate-950 pt-20">
@@ -210,12 +207,13 @@ const Contact = () => {
               <h2 className="text-3xl font-bold text-white mb-6">Find Us Here</h2>
               <div className="relative h-[500px] rounded-2xl overflow-hidden bg-slate-800 border border-slate-700">
                 <iframe
-                  title="Paramount Tools - Peenya, Bangalore"
-                  src={`https://www.google.com/maps?q=${mapQuery}&z=15&output=embed`}
-                  className="w-full h-full border-0"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2940704597486!2d77.4996373755468!3d13.016935987302679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3dfbf1f31d5d%3A0xc89452b33fa15f4d!2sRNS%20CNC%20CENTER!5e0!3m2!1sen!2sin!4v1764586421108!5m2!1sen!2sin"
+                  className="w-full h-full"
+                  style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  title="Paramount location on Google Maps"
                 />
               </div>
 
